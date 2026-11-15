@@ -53,14 +53,14 @@ function checkName(){
 // }
 
 
-let gender = document.getElementsByName("gender");
-for ( i = 0; i < gender.length; i++){
-    if(gender[i].checked){
-    return true;
-}
-}
-    alert("plzz select a gender ");
-    return false;
+// let gender = document.getElementsByName("gender");
+// for ( i = 0; i < gender.length; i++){
+//     if(gender[i].checked){
+//     return true;
+// }
+// }
+//     alert("plzz select a gender ");
+//     return false;
 
 
 }

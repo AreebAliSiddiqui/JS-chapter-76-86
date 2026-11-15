@@ -45,10 +45,22 @@ function checkName(){
 //     alert(name.value.trim())
 //    }
    
-let course = document.getElementById("course");
-if(course.selectedIndex === 0){
-    alert("plzz select a course")
-    return false;
+
+// let course = document.getElementById("course");
+// if(course.selectedIndex === 0){
+//     alert("plzz select a course")
+//     return false;
+// }
+
+
+let gender = document.getElementsByName("gender");
+for ( i = 0; i < gender.length; i++){
+    if(gender[i].checked){
+    return true;
 }
+}
+    alert("plzz select a gender ");
+    return false;
+
 
 }

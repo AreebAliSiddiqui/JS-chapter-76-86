@@ -63,4 +63,26 @@ function checkName(){
 //     return false;
 
 
+// let email = document.getElementById("email").value;
+// if(email.includes("@")){
+//     return true;
+// }else{
+//     alert("plzz enter a valid email")
+//     return false
+// }
+
+
+ let zip = document.getElementById("zip").value;
+if(zip.length < 5){
+    alert("plzz enter a 5 digit zipcode")
+    return false;
+}
+
+for ( i = 0; i < zip.length; i++){
+    let numberCheck = Number(zip[i]);
+    if (isNaN(numberCheck)){
+        alert("plzz enter a digits only not alphabets")
+        return false;
+    }
+}
 }

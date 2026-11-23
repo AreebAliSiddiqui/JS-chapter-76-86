@@ -50,12 +50,23 @@ let details = {
 // console.log(Object.values(student))
 
 
-// 3 Obejct.entries()
+// 4 Obejct.entries()
 // console.log(Object.entries(student));
 
-// 4 Object.freeze()
-Object.freeze(student);
-student.country = "pakistan";
-delete student.city;
-student.name = "farzan";
-console.log(student);
+// 5 Object.freeze()
+// Object.freeze(student);
+// student.country = "pakistan";
+// delete student.city;
+// student.name = "farzan";
+// console.log(student);
+
+
+// 6 Object.seal()
+// Object.seal(student);
+// student.country = "pakistan";
+// delete student.city;
+// student.name = "farzan";
+// console.log(student);
+
+// 7 Object.hasOwn()
+// console.log(Object.hasOwn(student,"name"));

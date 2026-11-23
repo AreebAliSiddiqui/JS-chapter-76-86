@@ -52,3 +52,10 @@ let details = {
 
 // 3 Obejct.entries()
 // console.log(Object.entries(student));
+
+// 4 Object.freeze()
+Object.freeze(student);
+student.country = "pakistan";
+delete student.city;
+student.name = "farzan";
+console.log(student);

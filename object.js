@@ -70,3 +70,53 @@ let details = {
 
 // 7 Object.hasOwn()
 // console.log(Object.hasOwn(student,"name"));
+
+
+
+
+
+// ------------------------Try and catch----------------------------------------
+
+// let userName = "arreb"
+// try{
+//     console.log(userName);
+    
+// }catch(err){
+//     console.log(err);
+//     console.log("plzz defined a username first");
+    
+    
+// }
+
+
+
+let form = document.getElementById("registrationForm");
+let userName = document.getElementById("name").value;
+
+
+let userEmail = document.getElementById("email").value;
+let userAge = document.getElementById("age").value;
+form.addEventListener('submit',function(event){
+ event.preventDefault();
+console.log(userName.length);
+try{
+    if(userName === ""){
+        throw "Name is required!"
+    }else if(userEmail.length === 0){
+         throw "Email is required!"
+    }else if(!userEmail.includes("@") || !userEmail.includes(".") || userEmail.includes(" ")){
+        throw "Email must contain @,'.', and cannot contain spaces"
+    }else if(userAge === ""){
+        throw "plzz enter your age"
+    }else if(userAge < 18){
+        throw "You must be 18 or older!"
+    }
+
+    console.log("rejistration successful");
+    
+}
+catch(err){
+ console.log(err);
+ 
+}
+})

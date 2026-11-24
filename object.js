@@ -91,32 +91,34 @@ let details = {
 
 
 let form = document.getElementById("registrationForm");
-let userName = document.getElementById("name").value;
 
-
-let userEmail = document.getElementById("email").value;
-let userAge = document.getElementById("age").value;
 form.addEventListener('submit',function(event){
  event.preventDefault();
-console.log(userName.length);
+
+
+let userName = document.getElementById("name").value;
+let userEmail = document.getElementById("email").value;
+let userAge = document.getElementById("age").value;
+let message = document.getElementById("message")
+
 try{
-    if(userName === ""){
+    if(userName.trim() === ""){
         throw "Name is required!"
-    }else if(userEmail.length === 0){
+    }else if(userEmail.trim().length === 0){
          throw "Email is required!"
     }else if(!userEmail.includes("@") || !userEmail.includes(".") || userEmail.includes(" ")){
         throw "Email must contain @,'.', and cannot contain spaces"
-    }else if(userAge === ""){
+    }else if(userAge.trim() === ""){
         throw "plzz enter your age"
-    }else if(userAge < 18){
+    }else if(userAge < 18 || userAge > 99){
         throw "You must be 18 or older!"
     }
 
-    console.log("rejistration successful");
+    message.innerHTML = "Rejistration Successful"
     
 }
 catch(err){
- console.log(err);
+message.innerHTML = err;
  
 }
 })
